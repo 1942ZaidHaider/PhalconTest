@@ -1,0 +1,17 @@
+body {
+    background: #222222;
+    color: mintcream;
+}
+a {
+    text-decoration:none;
+    color:red;
+}
+h1{
+    text-align: center;
+}
+.z-auto-pad{
+    padding:0 1em 0 1em;
+}
+.z-muted {
+    color:gray;
+}
