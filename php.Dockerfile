@@ -4,6 +4,7 @@ ARG PSR_VERSION=0.7.0
 ARG PHALCON_VERSION=4.0.2
 ARG PHALCON_EXT_PATH=php7/64bits
 
+RUN docker-php-ext-install pdo pdo_mysql
 RUN set -xe && \
     # Download PSR, see https://github.com/jbboehr/php-psr
     curl -LO https://github.com/jbboehr/php-psr/archive/v${PSR_VERSION}.tar.gz && \

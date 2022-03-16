@@ -1,19 +1,10 @@
 <h2>Sign up using this form</h2>
 
-<?php echo $this->tag->form("signup/register"); ?>
-
-    <p>
-        <label for="name">Name</label>
-        <?php echo $this->tag->textField("name"); ?>
-    </p>
-
-    <p>
-        <label for="email">E-Mail</label>
-        <?php echo $this->tag->textField("email"); ?>
-    </p>
-
-    <p>
-        <?php echo $this->tag->submitButton("Register"); ?>
-    </p>
-
-</form>
+<div class=''>
+    <form class='w-25 m-auto' action="/signup/register" method="POST">
+    <input type='text' name='name' placeholder="Name" class='form-control mt-2'>
+    <input type='email' name='email' placeholder="Email" class='form-control mt-2'>
+    <input type='text' name='pass' placeholder="Password" class='form-control mt-2'>
+    <input type='submit' class='form-control btn-success mt-2'>
+    </form>
+</div>
