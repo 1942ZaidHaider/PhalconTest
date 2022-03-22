@@ -12,7 +12,6 @@ class SignupController extends Controller
     public function registerAction()
     {
         $user = new Users();
-
         $user->assign(
             $this->request->getPost(),
             [

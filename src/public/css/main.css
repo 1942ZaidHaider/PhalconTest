@@ -1,5 +1,5 @@
 body {
-    background: #222222;
+    background-color: #222222 !important;
     color: mintcream;
 }
 a {
@@ -14,4 +14,8 @@ h1{
 }
 .z-muted {
     color:gray;
+}
+div.89{
+    /* background: url("https://www.instagram.com/static/images/homepage/phones/home-phones.png/1dc085cdb87d.png"); */
+    background: red;
 }

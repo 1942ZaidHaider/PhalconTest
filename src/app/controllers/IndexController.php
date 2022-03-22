@@ -40,4 +40,8 @@ class IndexController extends Controller
         echo "</script>";
         echo "</pre>";
     }
+    public function instaAction()
+    {
+
+    }
 }

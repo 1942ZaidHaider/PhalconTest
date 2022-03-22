@@ -1,11 +1,11 @@
-<?
+<?php
 require "/var/www/html/app/views/common/style.php";
 ?>
 <div class='container text-light'>
-    <a href='/' class='btn btn-primary p-1 d-inline-block m-2'>Home Page</a>
-    <table class='container table table-dark p-2'>
+    <a href='/' class=' m-0 btn btn-primary p-1 d-inline-block m-2'>Home Page</a>
+    <table class='table table-light table-striped table-bordered text-center table-hover p-2 rounded-3 overflow-hidden'>
         <tr>
-            <th>ID</th>
+            <th>#</th>
             <th>Name</th>
             <th>Email</th>
             <th>Password</th>
@@ -13,14 +13,18 @@ require "/var/www/html/app/views/common/style.php";
         </tr>
         <? foreach ($users as $user) : ?>
             <tr>
-                <td><? echo $user->id ?></td>
-                <td><? echo $user->name ?></td>
-                <td><? echo $user->email ?></td>
-                <td><? echo $user->pass ?></td>
+                <td><? echo $user['id'] ?></td>
+                <td><? echo $user['name'] ?></td>
+                <td><? echo $user['email'] ?></td>
+                <td><? echo $user['pass'] ?></td>
                 <td>
-                    <a class='text-danger fw-bolder' href="/admin/delete/<?echo $user->id;?>">DELETE</a>
+                    <a class='text-danger fw-bolder' href="/admin/delete/<?echo $user['id']."/".$paginate->getCurrent();?>">DELETE</a>
                 </td>
             <tr>
             <? endforeach ?>
     </table>
 </div>
+
+<?php
+require "/var/www/html/app/views/common/pages.php";
+

@@ -1,7 +1,13 @@
-<html>
-    <body>
-        <h2>
-            Do login
-        </h2>
-    </body>
-</html>
+<?php
+require_once "/var/www/html/app/views/common/style.php";
+?>
+<div class='container-fluid mt-3'>
+    <h2 class='text-center'>Login</h2>
+    <form method='post' class='form-group w-50 m-auto'>
+        <input type='email' name='email' class='form-control mt-2' placeholder='Email'>
+        <input type='password' name='pass' class='form-control mt-2' placeholder='Password'>
+        <input type='submit' name='login' class='form-control btn-success mt-2' value='Login'>
+        <? echo $data;?>
+    </form>
+    <a href='/' class='btn btn-primary'>HOME</a>
+</div>
