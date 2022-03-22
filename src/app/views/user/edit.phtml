@@ -1,0 +1,19 @@
+<?php
+require "/var/www/html/app/views/common/style.php";
+?>
+
+<pre class='text-light'>
+<?
+//print_r($data);
+?>
+</pre>
+<div class='w-50 m-auto'>
+    <h3> EDIT USER </h3>
+    <form method="post" class='form-group'>
+        <label>Name</label><input class='form-control mb-1' name="name" type='text' placeholder="User Name" value="<? echo $data->name ?>">
+        <label>Email</label><input class='form-control mb-1' name="email" type='text' placeholder="Email" value="<? echo $data->email ?>">
+        <label>Password</label><input class='form-control mb-1' name="pass" type='text' placeholder="Password" value="<? echo $data->pass ?>">
+        <input type="submit" value='Submit' class='btn btn-success'>
+        <a href='/user/index/1' class='btn btn-danger float-end'>Cancel</a>
+    </form>
+</div>

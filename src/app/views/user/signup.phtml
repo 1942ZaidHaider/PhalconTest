@@ -1,0 +1,22 @@
+<?php
+require APP_PATH . "/views/common/style.php";
+?>
+
+<div class='container m-auto w-50 mt-5'>
+    <a href='/user/index/1'>List All</a>
+    <h2> New User </h2>
+    <?php
+    echo $this->tag->form(["action" => "", "class" => 'form-group']);
+    echo "<label> Name </name>";
+    echo $this->tag->textField(["name", "class" => 'form-control']) . "<br>";
+    echo "<label> Email </name>";
+    echo $this->tag->emailField(["email", "class" => 'form-control']) . "<br>";
+    echo "<label> Password </name>";
+    echo $this->tag->passwordField(["pass", "class" => 'form-control']) . "<br>";
+    echo $this->tag->submitButton(["Sign Up", "class" => 'btn btn-primary']);
+    ?>
+    <div class="mt-3 alert alert-<?echo $class?>">
+        <?echo $message?>
+    </div>
+
+</div>

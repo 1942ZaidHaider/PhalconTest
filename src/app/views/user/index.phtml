@@ -3,6 +3,8 @@ require "/var/www/html/app/views/common/style.php";
 ?>
 <div class='container text-light'>
     <a href='/' class=' m-0 btn btn-primary p-1 d-inline-block m-2'>Home Page</a>
+    <?php
+require "/var/www/html/app/views/common/pages.php";?>
     <table class='table table-light table-striped table-bordered text-center table-hover p-2 rounded-3 overflow-hidden'>
         <tr>
             <th>#</th>
@@ -18,13 +20,16 @@ require "/var/www/html/app/views/common/style.php";
                 <td><? echo $user['email'] ?></td>
                 <td><? echo $user['pass'] ?></td>
                 <td>
-                    <a class='text-danger fw-bolder' href="/admin/delete/<?echo $user['id']."/".$paginate->getCurrent();?>">DELETE</a>
+                    <a class='text-success fw-bolder' href="/user/edit/<? echo $user['id'] . "/" . $paginate->getCurrent(); ?>">
+                        <i class="bi bi-pencil-square"></i>
+                    </a>
+                    <a class='text-danger fw-bolder' href="/user/delete/<? echo $user['id'] . "/" . $paginate->getCurrent(); ?>">
+                        <i class="bi bi-trash-fill"></i>
+                    </a>
                 </td>
             <tr>
             <? endforeach ?>
     </table>
 </div>
 
-<?php
-require "/var/www/html/app/views/common/pages.php";
 

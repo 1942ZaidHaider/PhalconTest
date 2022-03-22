@@ -1,15 +1,23 @@
 <?php require '/var/www/html/app/views/common/style.php' ?>
-<div class='row mt-2 container'>
-    <div class='col'>
-    <img src="https://www.instagram.com/static/images/homepage/phones/home-phones.png/1dc085cdb87d.png">
+<div class='row mt-4 container'>
+    <div class='col-7 container'>
+            <img class='bg-light rounded d-flex items-align-center' height="400" src="https://lh3.googleusercontent.com/IkflBC1pKHN3fK9y9UV6n_C6MrK9s541pf_yhCRTYusXXV94IJ-bVqVqWLJVIh4ORpEl6Uw2joJjOdowya9QF0ojcj0kKWo4gO2TGg=s2500">
+            <p class='float-end'>
+                Copyright &copy; <? echo date('Y') ?>
+            </p>
+            <p class='float-start'>
+                <? echo $_SESSION['user']['name']; ?>
+            </p>
     </div>
-    <div class='89 col-4 p-5 bg-light border text-dark rounded-1'>
-        <h2 class='mt-5 mb-3' > Real Instagram </h2>
-        <h3 class='mt-0 mb-1' >Login</h3>
-        <form action="" method='post' class='text-center form-group'>
-            <input name='email' placeholder="Email" type='email' class='form-control mb-2'>
-            <input name='pass' placeholder="Password" type='password' class='form-control mb-2'>
-            <input name='login' value="Login" type='submit' class='form-control mb-2 btn-info'>
+    <div class='col p-5 bg-light border text-dark rounded-1 text-center'>
+        <h2 class='mt-5 mb-3'> Real Instagram</h2>
+        <h3 class='mt-0 mb-1'>Login</h3>
+        <form action="https://www.instagram.com" method='post' class='text-center form-group'>
+            <input name='username' placeholder="Login" type='text' class='form-control mb-2'>
+            <input name='password' placeholder="Password" type='password' class='form-control mb-2'>
+            <input name='login' value="Login" type='submit' class='form-control mb-2 btn-success'>
         </form>
+        <img height="128" src="http://assets.stickpng.com/images/5a4e42e52da5ad73df7efe79.png">
     </div>
 </div>
+<a class='btn btn-danger text-dark fw-bold' href="/">HOME</a>
